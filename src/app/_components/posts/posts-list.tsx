@@ -28,7 +28,7 @@ export const PostsList = ({ title }: Props) => {
   const posts: Post[] = postsQuery.data?.data
 
   if (postsQuery.isLoading && !postsQuery.isFetched) return <PostsList.Loading />
-  if (postsQuery.data?.data.length === 0) return <EmptyPosts />
+  if (postsQuery.data?.data?.length === 0) return <EmptyPosts />
 
   return (
     <div>
